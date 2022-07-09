@@ -10,15 +10,11 @@ class UserActivity : AppCompatActivity() {
     private var userPosition = -1
     private lateinit var currentUser: User
 
-    private var adapter = UsersAdapter()
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityUserBinding.inflate(layoutInflater)
 
         userPosition = intent.getIntExtra("userPosition", -1)
-
         currentUser = usersList[userPosition]
 
         setContentView(binding.root)
@@ -47,7 +43,6 @@ class UserActivity : AppCompatActivity() {
                 lastName = binding.etLastName.text.toString()
                 email = binding.etEmail.text.toString()
             }
-            adapter.notifyDataSetChanged()
             finish()
         }
     }

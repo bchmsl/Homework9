@@ -1,8 +1,5 @@
 package com.bchmsl.homework9
 
-import android.os.Parcel
-import android.os.Parcelable
-
 data class User(
     var uid: Int,
     var firstName: String,

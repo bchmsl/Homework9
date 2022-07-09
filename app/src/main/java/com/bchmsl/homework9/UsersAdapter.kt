@@ -7,7 +7,7 @@ import com.bchmsl.homework9.databinding.LayoutUserBinding
 
 
 typealias onEditClick = (position: Int) -> Unit
-typealias onRemoveClick = (user: User, position: Int) -> Unit
+typealias onRemoveClick = (user: User) -> Unit
 
 class UsersAdapter : RecyclerView.Adapter<UsersAdapter.UsersViewHolder>() {
 
@@ -29,7 +29,7 @@ class UsersAdapter : RecyclerView.Adapter<UsersAdapter.UsersViewHolder>() {
             tvEmailValue.text = currentItem.email
         }
         holder.binding.btnEdit.setOnClickListener { itemEditClick(position) }
-        holder.binding.btnRemove.setOnClickListener { itemRemoveClick(currentItem, position) }
+        holder.binding.btnRemove.setOnClickListener { itemRemoveClick(currentItem) }
     }
 
     override fun getItemCount(): Int = usersList.size

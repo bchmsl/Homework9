@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +14,7 @@ class UsersActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUsersBinding
 
     private var adapter = UsersAdapter()
+    private var position = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +25,8 @@ class UsersActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        adapter.notifyDataSetChanged()
+        if (position == -1) Log.d("TAG", position.toString())
+        else adapter.notifyItemChanged(position)
     }
 
     private fun init() {
@@ -43,7 +46,7 @@ class UsersActivity : AppCompatActivity() {
         adapter.itemEditClick = { position ->
             editUser(position)
         }
-        adapter.itemRemoveClick = { user, position ->
+        adapter.itemRemoveClick = { user ->
             usersList.remove(user)
             adapter.notifyDataSetChanged()
         }
@@ -52,6 +55,7 @@ class UsersActivity : AppCompatActivity() {
     private fun editUser(position: Int) {
         val intent = Intent(this, UserActivity::class.java)
         intent.putExtra("userPosition", position)
+        this.position = position
         startActivity(intent)
     }
 }
