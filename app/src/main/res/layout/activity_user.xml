@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".UserActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
+        android:text="First Name:"
+        android:textSize="20sp" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_rectangle"
+        android:gravity="center"
+        tools:text="Jemali" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
+        android:text="Last Name:"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etLastName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_rectangle"
+        android:gravity="center"
+        tools:text="Kakauridze" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
+        android:text="Email:"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_rectangle"
+        android:gravity="center"
+        tools:text="jemalikakauridze@mail.ru" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_rectangle"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Save" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
