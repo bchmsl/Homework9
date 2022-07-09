@@ -25,8 +25,7 @@ class UsersActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        if (position == -1) Log.d("TAG", position.toString())
-        else adapter.notifyItemChanged(position)
+        adapter.notifyDataSetChanged()
     }
 
     private fun init() {
@@ -49,6 +48,10 @@ class UsersActivity : AppCompatActivity() {
         adapter.itemRemoveClick = { user ->
             usersList.remove(user)
             adapter.notifyDataSetChanged()
+        }
+        binding.btnAdd.setOnClickListener {
+            val intent = Intent(this, UserActivity::class.java)
+            startActivity(intent)
         }
     }
 

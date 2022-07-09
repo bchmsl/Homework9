@@ -1,7 +1,6 @@
 package com.bchmsl.homework9
 
 data class User(
-    var uid: Int,
     var firstName: String,
     var lastName: String
 ) {
@@ -9,28 +8,28 @@ data class User(
 }
 
 val usersList = mutableListOf(
-    User(1, "Nika", "Tabatadze"),
-    User(2, "Luka", "Parchukidze"),
-    User(3, "Armen", "Garibyan"),
-    User(4, "Bachana", "Mosulishvili"),
-    User(5, "Baia", "Asanidze"),
-    User(6, "Davit", "Tsiskarashvili"),
-    User(7, "Dimitri", "Jibuti"),
-    User(8, "Giorgi", "Murgulia"),
-    User(9, "Giorgi", "Gabidauri"),
-    User(10, "Irakli", "Dekanosidze"),
-    User(11, "Ivane", "Kitoshvili"),
-    User(12, "Lika", "Khokhiashvili"),
-    User(13, "Luka", "Janjghava"),
-    User(14, "Luka", "Lomidze"),
-    User(15, "Luka", "Mazmishvili"),
-    User(16, "Luka", "Nikuradze"),
-    User(17, "Mariam", "Eristavi"),
-    User(18, "Mariam", "Namgaladze"),
-    User(19, "Nika", "Namoradze"),
-    User(20, "Otar", "Bakhtadze"),
-    User(21, "Tengiz", "Gachechiladze"),
-    User(22, "Vato", "Ruadze"),
-    User(23, "Gaga", "Lomidze"),
-    User(24, "Misho", "Tsitsishvili")
+    User("Nika", "Tabatadze"),
+    User("Luka", "Parchukidze"),
+    User("Armen", "Garibyan"),
+    User("Bachana", "Mosulishvili"),
+    User("Baia", "Asanidze"),
+    User("Davit", "Tsiskarashvili"),
+    User("Dimitri", "Jibuti"),
+    User("Giorgi", "Murgulia"),
+    User("Giorgi", "Gabidauri"),
+    User("Irakli", "Dekanosidze"),
+    User("Ivane", "Kitoshvili"),
+    User("Lika", "Khokhiashvili"),
+    User("Luka", "Janjghava"),
+    User("Luka", "Lomidze"),
+    User("Luka", "Mazmishvili"),
+    User("Luka", "Nikuradze"),
+    User("Mariam", "Eristavi"),
+    User("Mariam", "Namgaladze"),
+    User("Nika", "Namoradze"),
+    User("Otar", "Bakhtadze"),
+    User("Tengiz", "Gachechiladze"),
+    User("Vato", "Ruadze"),
+    User("Gaga", "Lomidze"),
+    User("Misho", "Tsitsishvili")
 )

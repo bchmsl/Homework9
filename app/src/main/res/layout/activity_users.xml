@@ -20,6 +20,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rvUsers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        android:background="@drawable/rounded_rectangle"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_add"
+        android:id="@+id/btnAdd"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        android:backgroundTint="@android:color/holo_green_light"/>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvUsers"
         android:layout_width="match_parent"
